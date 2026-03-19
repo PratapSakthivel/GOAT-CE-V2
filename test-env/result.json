@@ -1,0 +1,21 @@
+[
+  "--- STEP 1 & 2: Auth and Create Room ---",
+  "Login failed with status 400",
+  "Full Error Response: User not found",
+  "Attempting registration as fallback...",
+  "Registration Status: 200",
+  "Registration Response: {\"token\":\"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0XzE3NzM5MjQ4MTY3MDhAZ21haWwuY29tIiwiaWF0IjoxNzczOTI0ODE3LCJleHAiOjE3NzQwMTEyMTd9.WE_JNETlU-zoLkKUb4G732b3NDcabEpn1aX4-S3J54bIafCDekQTmCQdyzsRKnQy\",\"name\":\"User A\",\"email\":\"test_1773924816708@gmail.com\"}",
+  "Room created: XAAO27",
+  "\n--- STEP 3: Connecting WebSocket ---",
+  "Connected to STOMP Broker!",
+  "\n--- STEP 4 & 5: Sequential Operations ---",
+  "[WS] Received broadcast: op1 (rev 1) - INSERT 'H' at 0",
+  "[WS] Received broadcast: op2 (rev 2) - INSERT 'i' at 1",
+  "\n--- STEP 6: Verifying Sequential Content ---",
+  "Content: \"Hi\" (Revision: 2)",
+  "\n--- STEP 7: Concurrent Operations ---",
+  "[WS] Received broadcast: op3 (rev 3) - INSERT 'X' at 0",
+  "[WS] Received broadcast: op4 (rev 4) - INSERT 'Y' at 1",
+  "\n--- STEP 8: Verifying Concurrent Content ---",
+  "Final Content: \"XYHi\" (Revision: 4)"
+]
