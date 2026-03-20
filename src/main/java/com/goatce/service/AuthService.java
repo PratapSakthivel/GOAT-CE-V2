@@ -4,7 +4,7 @@ import com.goatce.dto.AuthResponse;
 import com.goatce.dto.LoginRequest;
 import com.goatce.dto.RegisterRequest;
 import com.goatce.dto.VerifyOtpRequest;
-import com.goatce.model.User;
+import com.goatce.User;
 import com.goatce.repository.UserRepository;
 import com.goatce.security.JwtUtil;
 import org.springframework.data.redis.core.StringRedisTemplate;

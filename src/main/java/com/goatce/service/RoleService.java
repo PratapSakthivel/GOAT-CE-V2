@@ -1,9 +1,9 @@
 package com.goatce.service;
 
 import com.goatce.dto.RoleChangeRequest;
-import com.goatce.model.CollabRoom;
-import com.goatce.model.RoomParticipant;
-import com.goatce.model.User;
+import com.goatce.CollabRoom;
+import com.goatce.RoomParticipant;
+import com.goatce.User;
 import com.goatce.repository.CollabRoomRepository;
 import com.goatce.repository.RoomParticipantRepository;
 import com.goatce.repository.UserRepository;

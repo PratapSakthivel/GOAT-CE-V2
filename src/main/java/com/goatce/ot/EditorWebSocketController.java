@@ -1,7 +1,7 @@
 package com.goatce.ot;
 
-import com.goatce.model.CollabRoom;
-import com.goatce.model.Operation;
+import com.goatce.CollabRoom;
+import com.goatce.Operation;
 import com.goatce.repository.CollabRoomRepository;
 import com.goatce.repository.OperationRepository;
 import com.goatce.repository.RoomParticipantRepository;

@@ -1,4 +1,4 @@
-package com.goatce.model;
+package com.goatce;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,12 +7,12 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "folders")
+@Table(name = "users")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Folder {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -21,9 +21,15 @@ public class Folder {
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User owner;
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Column
+    @Builder.Default
+    private String role = "USER";
 
     @Column(updatable = false)
     private LocalDateTime createdAt;

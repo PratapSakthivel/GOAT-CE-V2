@@ -1,7 +1,11 @@
 package com.goatce.service;
 
 import com.goatce.dto.*;
-import com.goatce.model.*;
+import com.goatce.CodeFile;
+import com.goatce.CollabRoom;
+import com.goatce.FileVersion;
+import com.goatce.Folder;
+import com.goatce.User;
 import com.goatce.repository.*;
 import org.springframework.stereotype.Service;
 

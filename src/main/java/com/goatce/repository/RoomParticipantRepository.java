@@ -1,6 +1,6 @@
 package com.goatce.repository;
 
-import com.goatce.model.RoomParticipant;
+import com.goatce.RoomParticipant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

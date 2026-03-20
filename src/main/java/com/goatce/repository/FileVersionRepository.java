@@ -1,6 +1,6 @@
 package com.goatce.repository;
 
-import com.goatce.model.FileVersion;
+import com.goatce.FileVersion;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

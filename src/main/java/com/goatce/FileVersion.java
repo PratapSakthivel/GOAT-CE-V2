@@ -1,4 +1,4 @@
-package com.goatce.model;
+package com.goatce;
 
 import jakarta.persistence.*;
 import lombok.*;

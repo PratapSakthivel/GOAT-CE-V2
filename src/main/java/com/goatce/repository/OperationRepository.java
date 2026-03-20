@@ -1,6 +1,6 @@
 package com.goatce.repository;
 
-import com.goatce.model.Operation;
+import com.goatce.Operation;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

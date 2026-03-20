@@ -1,4 +1,4 @@
-package com.goatce.model;
+package com.goatce;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,34 +7,32 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "operations")
+@Table(name = "collab_rooms")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Operation {
+public class CollabRoom {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(nullable = false)
-    private String roomId;
+    private String name;
 
     @Column(nullable = false)
-    private String userId;
+    private String language;
 
-    @Column(nullable = false)
-    private String userName;
+    @Column(nullable = false, unique = true)
+    private String roomCode;
 
-    @Column(nullable = false)
-    private String type;
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private User owner;
 
-    @Column(nullable = false)
-    private Integer position;
-
-    @Column
-    private String character;
+    @Column(columnDefinition = "TEXT")
+    private String content;
 
     @Column(nullable = false)
     private Integer revision;
@@ -45,5 +43,11 @@ public class Operation {
     @PrePersist
     public void prePersist() {
         this.createdAt = LocalDateTime.now();
+        if (this.revision == null) {
+            this.revision = 0;
+        }
+        if (this.content == null) {
+            this.content = "";
+        }
     }
 }

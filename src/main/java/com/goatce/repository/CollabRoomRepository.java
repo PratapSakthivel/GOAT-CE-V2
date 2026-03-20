@@ -1,6 +1,6 @@
 package com.goatce.repository;
 
-import com.goatce.model.CollabRoom;
+import com.goatce.CollabRoom;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
